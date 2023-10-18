@@ -1,6 +1,8 @@
 # Crisis Text Line Take Home Assignment
 by: Huang Pan
 
+https://github.com/huang-pan/market_basket/blob/main/docs/Market_basket.pdf
+
 Subtask 3: Documentation.
 
 - write a short explanation of how to run the program.
