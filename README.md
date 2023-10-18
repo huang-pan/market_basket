@@ -3,7 +3,7 @@ by: Huang Pan
 
 https://github.com/huang-pan/market_basket/blob/main/docs/Market_basket.pdf
 
-Subtask 3: Documentation.
+### Subtask 3: Documentation.
 
 - write a short explanation of how to run the program.
 
@@ -29,7 +29,7 @@ Can call code using orchestration tool like Airflow
 Instead of using a python dictionary and reading / writing it to disk, which is very slow, I would use a database.
    A fast key value store like AWS Elasticache for redis or AWS MemoryDB for redis would be ideal.
 
-Bonus
+### Bonus
 
 Bonus tasks:
 
