@@ -90,6 +90,18 @@ scale = 3, 600k rows input file\
 end: 434.54866003990173 seconds
 
 
+If we reduce the INPUT_CHUNK_SIZE, it takes longer to create the chunked input files. But the overall algorithm
+may be faster.
+
+INPUT_CHUNK_SIZE: 40000 --> 10000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 131.88507795333862 seconds
+
+INPUT_CHUNK_SIZE: 40000 --> 2000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 127.2197618484497 seconds
+
+
 #### - the baskets in the example data are generated randomly, and therefore each product combination appears in approximately the same number of baskets. Would the algorithm still work if this wasn’t the case, and some product combinations would occur much more often than others?
 
 Yes, the algorithm would still work. The algorithm is not dependent on the number of times a product combination appears in the input file. Certain output csvs will have larger counts than others.
