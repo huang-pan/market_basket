@@ -4,7 +4,7 @@ Attempt to solve the problem using an intermediate dataset approach.
   Intermediate dataset keeps track of the count of all unique product combinations from each basket.
 Does not work well:
 - intermediate dataset takes up too much memory
-- doesn't speed up output generation
+- doesn't speed up output generation by that much
 
 Subtask 1: Find a good way of splitting the data into multiple datasets.
 - generate a dataset with scale 1 using the Python script from the data.tar.gz archive
