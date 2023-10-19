@@ -52,7 +52,7 @@ scale = 3, 600k rows input file
 end: 449.5827350616455 seconds --- O(n) time complexity
 
 
-The algorithm starts to slow down if we use fewer output files and store more output product combinations per file:\
+The algorithm starts to slow down if we use fewer output files and store more output product combinations per file:
 
 main.py: unique first product in output csv file name\
          slower execution time, > O(n) time complexity, but fewer output files\
