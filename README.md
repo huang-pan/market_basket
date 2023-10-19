@@ -14,7 +14,8 @@ python main.py
 The actual algorithm to solve the problem is documented in the comments here: \
 https://github.com/huang-pan/market_basket/blob/main/main.py 
 
-I made an initial version of the code (main_initial.py) that calculates the correct result. The initial version didn't take memory constraints into account.\
+I first calculated the correct result by hand from the data_example.csv.\
+I then made an initial version of the code (main_initial.py) that calculates the correct result. The initial version didn't take memory constraints into account.\
 I then made a second version of the code (main.py) that takes memory constraints into account and compared the results with that of the initial version.
 
 #### - explain why it works within the memory constraints.
