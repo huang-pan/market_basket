@@ -12,21 +12,21 @@ python main.py
 #### - explain why it computes the correct result.
 
 I made an initial version of the code (main_initial.py) that calculates the correct result. The initial version didn't take memory constraints into account.\
-I then made a second version of the code (main.py) that takes memory constraints into account and compared the results with that of the initial version.\
+I then made a second version of the code (main.py) that takes memory constraints into account and compared the results with that of the initial version.
 
 #### - explain why it works within the memory constraints.
 
-The input csv file is split up into chunks with chunk sizes specifiable by INPUT_CHUNK_SIZE.
-We write many small output csv files specified by the unique product combination of 2, with the smaller product number first.
+The input csv file is split up into chunks with chunk sizes specifiable by INPUT_CHUNK_SIZE.\
+We write many small output csv files specified by the unique product combination of 2, with the smaller product number first.\
    This avoids keeping large output dictionaries in memory that keep track of the counts of all unique product combinations of 2.
 
 #### - explain how you would productionize your solution.
 
-Put code on AWS lambda function with set memory limit
-Use AWS S3 to store input and output files
-Can call code using orchestration tool like Airflow
+Put code on AWS lambda function with set memory limit.\
+Use AWS S3 to store input and output files.\
+Can call code using orchestration tool like Airflow.
 
-Instead of using a python dictionary and reading / writing it to disk, which is very slow, I would use a database.
+Instead of using a python dictionary and reading / writing it to disk, which is very slow, I would use a database.\
    A fast key value store like AWS Elasticache for redis or AWS MemoryDB for redis would be ideal.
 
 ## Bonus
