@@ -72,7 +72,7 @@ end: 1273.5828647613525 seconds ---, 5x scale 1
 
 Yes, the algorithm would still work. The algorithm is not dependent on the number of times 
 a product combination appears in the input file. Certain output csvs will be larger than others,
-any the execution time will be longer however.
+and the execution time will be longer however.
 
 #### - how would the problem change if we are also interested in the occurrence of combinations of three products within a basket?
 
