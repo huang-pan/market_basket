@@ -218,4 +218,4 @@ if __name__ == '__main__':
     generate_final_product_count()
     #print(final_products_count)
 
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print('--- %s seconds ---' % (time.time() - start_time))

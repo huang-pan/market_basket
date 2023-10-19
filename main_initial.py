@@ -201,4 +201,4 @@ with open('output/output.csv', 'w') as csv_file:
         writer.writerow([prod[0], prod[1], v])
         #writer.writerow([prod[0], prod[1], prod[2], v])
 
-print("--- %s seconds ---" % (time.time() - start_time))
+print('--- %s seconds ---' % (time.time() - start_time))

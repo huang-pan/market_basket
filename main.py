@@ -122,7 +122,7 @@ def read_split_csvs():
                     current_basket = basket
                     current_products = set()
                     current_products.add(product)
-        print("--- %s seconds ---" % (time.time() - start_time))
+        print('--- %s seconds ---' % (time.time() - start_time))
 
     # write last basket
     if new_basket is False and len(current_products) >= NUM_PRODUCT_COMBINATIONS:
@@ -201,4 +201,4 @@ if __name__ == '__main__':
     # Read chunked csvs, generate output csvs
     read_split_csvs()
 
-    print("end: %s seconds ---" % (time.time() - start_time))
+    print('end: %s seconds ---' % (time.time() - start_time))
