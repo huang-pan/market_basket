@@ -53,6 +53,18 @@ scale = 3, 600k rows input file\
 end: 449.5827350616455 seconds --- O(n) time complexity
 
 
+If we reduce the INPUT_CHUNK_SIZE, it takes longer to create the chunked input files. But the overall algorithm
+may be faster.
+
+INPUT_CHUNK_SIZE: 40000 --> 10000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 131.88507795333862 seconds
+
+INPUT_CHUNK_SIZE: 40000 --> 2000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 127.2197618484497 seconds
+
+
 The algorithm starts to slow down if we use fewer output files and store more output product combinations per file:
 
 main.py: unique first product in output csv file name\
@@ -68,18 +80,6 @@ end: 709.4775440692902 seconds ---, 3x scale 1
 
 scale = 3, 600k rows input file\
 end: 1273.5828647613525 seconds ---, 5x scale 1
-
-
-If we reduce the INPUT_CHUNK_SIZE, it takes longer to create the chunked input files. But the overall algorithm
-may be faster.
-
-INPUT_CHUNK_SIZE: 40000 --> 10000\
-scale = 1, 200k rows input file\
-end: 154.57265996932983 seconds --> 131.88507795333862 seconds
-
-INPUT_CHUNK_SIZE: 40000 --> 2000\
-scale = 1, 200k rows input file\
-end: 154.57265996932983 seconds --> 127.2197618484497 seconds
 
 
 If we use an intermediate dataset to keep track of the counts of all unique product combinations from each basket,
