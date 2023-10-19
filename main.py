@@ -150,13 +150,16 @@ def n_length_combo(lst, n):
 
 
 ## Store output combinations
+#  Creates an output csv file for each unique product combination, e.g.: output_1_5.csv
+#    output_1_5.csv stores the count of number of baskets that bought product 1 and product 5
+#    the product with the smallest number is always first
 def store_output_combinations(combination):
 
     combination = tuple(sorted(combination))
     # Read output csv into dict if output csv exists
     final_products_count = dict() # counts number of basket occurences of all product combinations of 2
-    #file_name = 'output/output_part_'+ str(combination[0]) +'.csv' # slower execution time but fewer output files
-    file_name = 'output/output_part_'+ str(combination[0]) + '_' + str(combination[1]) +'.csv'
+    #file_name = 'output/output_'+ str(combination[0]) +'.csv' # slower execution time but fewer output files
+    file_name = 'output/output_'+ str(combination[0]) + '_' + str(combination[1]) +'.csv'
     if os.path.exists(file_name):
         with open(file_name, newline='') as csvfile:
             reader = csv.DictReader(csvfile)
