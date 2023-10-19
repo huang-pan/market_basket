@@ -112,3 +112,13 @@ I created a generalized solution that can handle any number of output product co
 I tested the solution for NUM_PRODUCT_COMBINATIONS = 3, there are fewer output csv files due to the combinations formula:\
 nCr = n! / (r! * (n - r)!)\
 where n = number of unique products, r = number of products in each combination
+
+
+#### TO DO
+- parameterize main.py
+- create unit tests
+- split up main.py into smaller functions: pure functions and functions that access data infrastructure
+- add error checking and handling for input parameters, schemas, etc.
+   - what about corrupt input / output csv files?
+   - what about input schemas with mispelling?
+- parallelize code
