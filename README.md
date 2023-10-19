@@ -97,6 +97,6 @@ Yes, the algorithm would still work. The algorithm is not dependent on the numbe
 #### - how would the problem change if we are also interested in the occurrence of combinations of three products within a basket?
 
 I created a generalized solution that can handle any number of output product combinations.
-I tested the solution for NUM_PRODUCT_COMBINATIONS = 3, there are fewer output csv files due to the combinations formula:
-nCr = n! / (r! * (n - r)!)
+I tested the solution for NUM_PRODUCT_COMBINATIONS = 3, there are fewer output csv files due to the combinations formula:\
+nCr = n! / (r! * (n - r)!)\
 where n = number of unique products, r = number of products in each combination
