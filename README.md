@@ -116,7 +116,7 @@ where n = number of unique products, r = number of products in each combination
 
 #### TO DO
 - For more production ready data engineering
-- parameterize main.py
+- parameterize main.py: makes it easier to run experiments above
 - create unit tests
 - split up main.py into smaller functions: pure functions and functions that access data infrastructure
 - add error checking and handling for input parameters, schemas, etc.
