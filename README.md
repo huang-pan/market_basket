@@ -70,6 +70,18 @@ scale = 3, 600k rows input file\
 end: 1273.5828647613525 seconds ---, 5x scale 1
 
 
+If we reduce the INPUT_CHUNK_SIZE, it takes longer to create the chunked input files. But the overall algorithm
+may be faster.
+
+INPUT_CHUNK_SIZE: 40000 --> 10000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 131.88507795333862 seconds
+
+INPUT_CHUNK_SIZE: 40000 --> 2000\
+scale = 1, 200k rows input file\
+end: 154.57265996932983 seconds --> 127.2197618484497 seconds
+
+
 If we use an intermediate dataset to keep track of the counts of all unique product combinations from each basket,
 then use this intermediate dataset to generate the output csv files, the execution time is slightly faster.
 This is because we have fewer writes to the output csv files. The drawback of this approach is that the intermediate
@@ -88,18 +100,6 @@ end: 271.8661630153656 seconds
 scale = 3, 600k rows input file\
 154569 rows in intermediate dataset / dictionary\
 end: 434.54866003990173 seconds
-
-
-If we reduce the INPUT_CHUNK_SIZE, it takes longer to create the chunked input files. But the overall algorithm
-may be faster.
-
-INPUT_CHUNK_SIZE: 40000 --> 10000\
-scale = 1, 200k rows input file\
-end: 154.57265996932983 seconds --> 131.88507795333862 seconds
-
-INPUT_CHUNK_SIZE: 40000 --> 2000\
-scale = 1, 200k rows input file\
-end: 154.57265996932983 seconds --> 127.2197618484497 seconds
 
 
 #### - the baskets in the example data are generated randomly, and therefore each product combination appears in approximately the same number of baskets. Would the algorithm still work if this wasn’t the case, and some product combinations would occur much more often than others?
