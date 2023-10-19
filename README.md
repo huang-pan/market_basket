@@ -16,9 +16,9 @@ I then made a second version of the code (main.py) that takes memory constraints
 
 #### - explain why it works within the memory constraints.
 
-The input csv file is split up into chunks with chunk sizes specifiable by INPUT_CHUNK_SIZE
-We write many small output csv files specified by the unique product combination of 2, with the smaller product number first 
-   This avoids keeping large output dictionaries in memory that keep track of the counts of all unique product combinations of 2
+The input csv file is split up into chunks with chunk sizes specifiable by INPUT_CHUNK_SIZE.
+We write many small output csv files specified by the unique product combination of 2, with the smaller product number first.
+   This avoids keeping large output dictionaries in memory that keep track of the counts of all unique product combinations of 2.
 
 #### - explain how you would productionize your solution.
 
