@@ -12,8 +12,10 @@ Final solution with the best execution time performance
     Calculate all combinations of 2 from the above list
     Store the combinations of 2 into a small output csv file specified by the unique 
         output combination of 2 in the file name. This file keeps track of the count of 
-	this particular combination.
-    The problem with this approach is the small file problem: too many small files
+	this particular combination. e.g.: output_1_5.csv
+	output_1_5.csv stores the count of number of baskets that bought product 1 and product 5
+	the product with the smallest number is always first
+    The problem with this approach is the small file problem: too many small files.
 - I then compared the output results with the output results from the main_initial.py file
   to ensure correctness.
 - The solution I created is generalizable to any number of product combinations (2, 3, etc.)
