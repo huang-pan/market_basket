@@ -174,7 +174,8 @@ def store_output_combinations(combination, count):
     #print(combination)
     # Read output csv into dict if output csv exists
     final_products_count = dict() # counts number of basket occurences of all product combinations of 2
-    file_name = 'output/output_part_'+ str(combination[0]) +'.csv'
+    #file_name = 'output/output_'+ str(combination[0]) +'.csv'
+    file_name = 'output/output_'+ str(combination[0]) + '_' + str(combination[1]) +'.csv'
     #file_name = 'output/output_part_1.csv'
     if os.path.exists(file_name):
         with open(file_name, newline='') as csvfile:
