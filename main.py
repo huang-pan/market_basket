@@ -8,11 +8,11 @@ Final solution with the best execution time performance
     neither the input nor the output csv files will fit into memory:
   Read in the input csv.gz file, output smaller csv files set by INPUT_CHUNK_SIZE
   For each smaller csv file, read in the csv file line by line
-    Calculate the products in each individual basket
-    Calculate the combinations of 2 for all products in each individual basket
+    Create a list of all the unique products in each individual basket
+    Calculate all combinations of 2 from the above list
     Store the combinations of 2 into a small output csv file specified by the unique 
-        output combination of 2. This file keeps track of the count of this particular
-        combination.
+        output combination of 2 in the file name. This file keeps track of the count of 
+	this particular combination.
     The problem with this approach is the small file problem: too many small files
 - I then compared the output results with the output results from the main_initial.py file
   to ensure correctness.
