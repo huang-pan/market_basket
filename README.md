@@ -43,13 +43,13 @@ Does it behave as expected?
 Yes, my algorithm scales linearly with the number of rows, it has time complexity O(n). See measurements below:
 
 main.py: unique 2 product output combination in output csv file name\
-scale = 1, 200k rows input file
+scale = 1, 200k rows input file\
 end: 154.57265996932983 seconds
 
-scale = 2, 400k rows input file
+scale = 2, 400k rows input file\
 end: 294.7591280937195 seconds
 
-scale = 3, 600k rows input file
+scale = 3, 600k rows input file\
 end: 449.5827350616455 seconds --- O(n) time complexity
 
 
@@ -60,13 +60,13 @@ main.py: unique first product in output csv file name\
          fewer output files means more output product combination counts in each output file\
          the larger the output file, the slower the read / write to the output file
 
-scale = 1, 200k rows input file
+scale = 1, 200k rows input file\
 end: 246.62168097496033 seconds
 
-scale = 2, 400k rows input file
+scale = 2, 400k rows input file\
 end: 709.4775440692902 seconds ---, 3x scale 1
 
-scale = 3, 600k rows input file
+scale = 3, 600k rows input file\
 end: 1273.5828647613525 seconds ---, 5x scale 1
 
 
@@ -77,16 +77,16 @@ dataset takes up memory.
 
 main_complex.py
 
-scale = 1, 200k rows input file
-50135 rows in intermediate dataset / dictionary
+scale = 1, 200k rows input file\
+50135 rows in intermediate dataset / dictionary\
 end: 126.80779075622559 seconds
 
-scale = 2, 400k rows input file
-102557 rows in intermediate dataset / dictionary
+scale = 2, 400k rows input file\
+102557 rows in intermediate dataset / dictionary\
 end: 271.8661630153656 seconds
 
-scale = 3, 600k rows input file
-154569 rows in intermediate dataset / dictionary
+scale = 3, 600k rows input file\
+154569 rows in intermediate dataset / dictionary\
 end: 434.54866003990173 seconds
 
 
