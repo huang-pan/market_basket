@@ -163,7 +163,10 @@ def store_output_combinations(combination):
     # Read output csv into dict if output csv exists
     final_products_count = dict() # counts number of basket occurences of all product combinations of 2
     #file_name = 'output/output_'+ str(combination[0]) +'.csv' # slower execution time but fewer output files
-    file_name = 'output/output_'+ str(combination[0]) + '_' + str(combination[1]) +'.csv'
+    if NUM_PRODUCT_COMBINATIONS == 2:
+        file_name = 'output/output_'+ str(combination[0]) + '_' + str(combination[1]) +'.csv'
+    elif NUM_PRODUCT_COMBINATIONS == 3:
+        file_name = 'output/output_'+ str(combination[0]) + '_' + str(combination[1]) + '_' + str(combination[2]) +'.csv'
     if os.path.exists(file_name):
         with open(file_name, newline='') as csvfile:
             reader = csv.DictReader(csvfile)
