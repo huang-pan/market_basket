@@ -132,8 +132,7 @@ def read_split_csvs():
 
 ## Calculate product combinations of NUM_PRODUCT_COMBINATIONS
 #  https://www.geeksforgeeks.org/combinations-in-python-without-using-itertools/
-#  Function to create combinations 
-#  without itertools
+#  Function to create combinations without itertools
 def n_length_combo(lst, n):
     if n == 0:
        return [[]]
