@@ -38,7 +38,7 @@ Does it behave as expected?
 
 Yes, my algorithm scales linearly with the number of rows, it has time complexity O(n). See measurements below:
 
-main.py: unique 2 product output combination in output csv file name
+main.py: unique 2 product output combination in output csv file name\
 scale = 1, 200k rows input file
 end: 154.57265996932983 seconds
 
@@ -48,8 +48,8 @@ end: 294.7591280937195 seconds
 scale = 3, 600k rows input file
 end: 449.5827350616455 seconds --- O(n) time complexity
 
-main.py: unique first product in output csv file name
-         slower execution time,, > O(n) time complexity, but fewer output files
+main.py: unique first product in output csv file name\
+         slower execution time,, > O(n) time complexity, but fewer output files\
 scale = 1, 200k rows input file
 end: 246.62168097496033 seconds
 
