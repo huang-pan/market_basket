@@ -10,6 +10,8 @@ Final solution with the best execution time performance
   For each smaller csv file, read in the csv file line by line
     Create a list of all the unique products in each individual basket
     Calculate all combinations of 2 from the above list
+        nCr = n! / (r! * (n - r)!)\
+        where n = number of unique products in each basket, r = number of products in each combination
     Store the combinations of 2 into a small output csv file specified by the unique 
         output combination of 2 in the file name. This file keeps track of the count of 
 	this particular combination. e.g.: output_1_5.csv
