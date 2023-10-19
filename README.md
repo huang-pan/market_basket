@@ -69,13 +69,34 @@ end: 709.4775440692902 seconds ---, 3x scale 1
 scale = 3, 600k rows input file
 end: 1273.5828647613525 seconds ---, 5x scale 1
 
+
+If we use an intermediate dataset to keep track of the counts of all unique product combinations from each basket,
+then use this intermediate dataset to generate the output csv files, the execution time is slightly faster.
+This is because we have fewer writes to the output csv files. The drawback of this approach is that the intermediate
+dataset takes up memory.
+
+main_complex.py
+
+scale = 1, 200k rows input file
+50135 rows in intermediate dataset / dictionary
+end: 126.80779075622559 seconds
+
+scale = 2, 400k rows input file
+102557 rows in intermediate dataset / dictionary
+end: 271.8661630153656 seconds
+
+scale = 3, 600k rows input file
+154569 rows in intermediate dataset / dictionary
+end: 434.54866003990173 seconds
+
+
 #### - the baskets in the example data are generated randomly, and therefore each product combination appears in approximately the same number of baskets. Would the algorithm still work if this wasn’t the case, and some product combinations would occur much more often than others?
 
-Yes, the algorithm would still work. The algorithm is not dependent on the number of times 
-a product combination appears in the input file. Certain output csvs will be larger than others,
-and the execution time will be longer however.
+Yes, the algorithm would still work. The algorithm is not dependent on the number of times a product combination appears in the input file. Certain output csvs will have larger counts than others.
 
 #### - how would the problem change if we are also interested in the occurrence of combinations of three products within a basket?
 
 I created a generalized solution that can handle any number of output product combinations.
-I tested the solution for NUM_PRODUCT_COMBINATIONS = 3
+I tested the solution for NUM_PRODUCT_COMBINATIONS = 3, there are fewer output csv files due to the combinations formula:
+nCr = n! / (r! * (n - r)!)
+where n = number of unique products, r = number of products in each combination

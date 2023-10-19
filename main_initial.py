@@ -2,6 +2,7 @@
 Crisis Text Line Take Home Assignment
 Initial solution without output file splitting that generates the correct solution
 
+
 Subtask 1: Find a good way of splitting the data into multiple datasets.
 - generate a dataset with scale 1 using the Python script from the data.tar.gz archive
 (python generate_dataset.py --scale 1) that can be used to test the implementation
@@ -27,11 +28,14 @@ Subtask 3: Documentation.
 import csv
 import gzip
 import time
+import os
+import glob
 
 ## Global constants
-#INPUT_CSV = 'data/data_example.csv.gz'
-INPUT_CSV = 'data/data_1.csv.gz'
-CHUNK_SIZE = 40000
+INPUT_CSV = 'data/data_example.csv.gz'
+CHUNK_SIZE = 25
+#INPUT_CSV = 'data/data_1.csv.gz'
+#CHUNK_SIZE = 40000
 NUM_PRODUCT_COMBINATIONS = 2 # number of product combinations to find
 OUTPUT_HEADER = ['product_1', 'product_2', 'num_baskets'] # for NUM_PRODUCT_COMBINATIONS = 2
 #OUTPUT_HEADER = ['product_1', 'product_2', 'product_3', 'num_baskets'] # for NUM_PRODUCT_COMBINATIONS = 3
@@ -75,7 +79,7 @@ with gzip.open(INPUT_CSV, 'rt') as f:
 #   Don't need to close file if you use with
 new_basket = True
 for file_name in chunk_file_list:
-    #print(file_name)
+    print(file_name)
     with open(file_name) as csvfile:
         mycsv = csv.reader(csvfile)
         for row in mycsv:
@@ -114,7 +118,7 @@ if new_basket is False and len(current_products) >= NUM_PRODUCT_COMBINATIONS:
 #print(basket_products)
 #print(len(basket_products))
 #print('\n')
-print(all_products_count)
+#print(all_products_count)
 print(len(all_products_count))
 maxlen = 0
 for k, v in all_products_count.items():
