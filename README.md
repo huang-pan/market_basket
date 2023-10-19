@@ -57,7 +57,7 @@ The algorithm starts to slow down if we use fewer output files and store more ou
 main.py: unique first product in output csv file name\
          slower execution time, > O(n) time complexity, but fewer output files\
          fewer output files means more output product combination counts in each output file\
-         the larger the output file, the slower the read / write to the output file\
+         the larger the output file, the slower the read / write to the output file
 
 scale = 1, 200k rows input file
 end: 246.62168097496033 seconds
