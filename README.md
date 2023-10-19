@@ -68,17 +68,13 @@ end: 709.4775440692902 seconds ---, 3x scale 1
 scale = 3, 600k rows input file
 end: 1273.5828647613525 seconds ---, 5x scale 1
 
-#### - the baskets in the example data are generated randomly, and therefore each product
-combination appears in approximately the same number of baskets. Would the algorithm
-still work if this wasn’t the case, and some product combinations would occur much more
-often than others?
+#### - the baskets in the example data are generated randomly, and therefore each product combination appears in approximately the same number of baskets. Would the algorithm still work if this wasn’t the case, and some product combinations would occur much more often than others?
 
 Yes, the algorithm would still work. The algorithm is not dependent on the number of times 
 a product combination appears in the input file. Certain output csvs will be larger than others,
 any the execution time will be longer however.
 
-#### - how would the problem change if we are also interested in the occurrence of
-combinations of three products within a basket?
+#### - how would the problem change if we are also interested in the occurrence of combinations of three products within a basket?
 
 I created a generalized solution that can handle any number of output product combinations.
 I tested the solution for NUM_PRODUCT_COMBINATIONS = 3
