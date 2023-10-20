@@ -115,11 +115,20 @@ where n = number of unique products, r = number of products in each combination
 
 
 #### TO DO
-- For more production ready data engineering
-- parameterize main.py: makes it easier to run experiments above
-- create unit tests
+- From code review: for more production ready data engineering, apply data engineering best practices
+- parameterize main.py: makes it easier to run and log experiments above
+   - maybe even create a testing file that runs main.py with different input parameter combinations
 - split up main.py into smaller functions: pure functions and functions that access data infrastructure
-- add error checking and handling for input parameters, schemas, etc.
-   - what about corrupt input / output csv files?
-   - what about input schemas with mispelling?
+- create unit tests for all functions
+- use python 3 type checking: have variable types for function input parameters
+- add error checking, handling, and logging for input parameters, schemas, etc.
+   - type checking of all function input parameters, variables, data types read in from csvs, etc.
+   - error handling: try except, info warnings / errors - stop
+      - what about corrupt input / output csv files?
+      - what about input schemas with mispelling?
 - parallelize code
+   - map
+      - input csv chunks: no buckets cross chunk boundaries, then can parallelize product combination counting
+      - output csv chunks: add parallel process name to output csv chunk, e.g. output_1_7a.csv where a is the process name
+   - reduce
+      - after process is done, combine all output chunk files into one, e.g. output_1_7a.csv, output_1_7b.csv, ... --> output_1_7.csv
