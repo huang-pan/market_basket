@@ -32,6 +32,7 @@ Can call code using orchestration tool like Airflow.
 
 Instead of using a python dictionary and reading / writing the output files to disk, which is very slow, I would use a database.\
    A fast key value store like AWS Elasticache for redis or AWS MemoryDB for redis would be ideal for storing the output results.
+For more productionizing, see TO DO section below.
 
 ## Bonus
 
