@@ -116,7 +116,7 @@ nCr = n! / (r! * (n - r)!)\
 where n = number of unique products, r = number of products in each combination
 
 
-#### TO DO
+## TO DO
 - From code review: for more production ready data engineering, apply data engineering best practices
 - parameterize main.py: makes it easier to run and log experiments above
    - maybe even create a testing file that runs main.py with different input parameter combinations
