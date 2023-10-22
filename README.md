@@ -128,6 +128,7 @@ where n = number of unique products, r = number of products in each combination
    - error handling: try except, info warnings / errors - stop
       - what about corrupt input / output csv files?
       - what about input schemas with mispelling?
+- the idea is to make data pipelines as idempotent as possible; in case of a pipeline failure, re-running the pipeline will generate the same results every time
 - parallelize code
    - map
       - input csv chunks: no buckets cross chunk boundaries, then can parallelize product combination counting
